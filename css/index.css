@@ -1,0 +1,40 @@
+body{
+    
+    padding: 30px;
+    padding-top: 15px;
+    background-color: #f8eae5; 
+
+}
+
+
+*{
+    color: #03172c;
+}
+
+.titleName{
+    
+    font-family: 'Playfair Display';
+    
+}
+
+.fontButton{
+    font-family: 'Gothic A1'
+}
+
+.pageTitlePos {
+    font-size: xx-large;
+    text-decoration: underline;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.boxTitles {
+    width: 250px;
+    height: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 20px;
+    border: 0.5px solid #03172c;}
+
+
