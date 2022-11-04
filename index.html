@@ -1,38 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head> 
-    <title> About Me </title>
-</head>  
+    <title> Cinthya Gomez </title>
+
+    <meta name="author" content="Cinthya Gomez"/>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Playfair+Display">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Gothic+A1">
+</head>  
     
-<body>
-Cinthya Gomez
-<section> 
+<body class= "pageLayout">
+    <navbar>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href = "#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a href = "#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+                <a href = "#skillNav">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a href = "#connect">Connect</a>
+            </li>
+            <li class="nav-item">
+                <a href = "#contact">Contact</a>
+            </li>
+            
+        </ul>
+    </navbar>
+   
+ <section  class="pageTitlePos">
+    <span>Cinthya Gomez</span>
+</section>
+
+
+<div class="titleName" id="about"> 
     <h1>About</h1>
-<p>I am a cat person. On my spare time I like to go to the gym, try new restaurants, and travel. I recently traveled to the Mexican state of Guanajuanto and I am planning my next trip to Costa Rica.</p>
-</section>
+<p>I am a forever student, always eager to learn and create within new spaces. 
+    A new found interest and challenge has been to create within the computer programming space. 
+    I am a believer that the human capacity is unlimited with discipline and profound curiosity anyone can learn anything. 
+    I am an avid adventure seeker, food lover, traveler, outdoor explorer, and soon to be coder. </p>
+</div>
 
-<section>
-    <h2>Experience</h2>
-<p>Los Angeles Unified School District as a special education assistant
-Esperanza Immigrant Rights Project as a administrative assistant </p>
-</section>
+<!-- Flexbox Experience -->
 
-<section id="skills">
+<div class="titleName" id="experience">
+    <h1>Experience</h1>
+    <ul>
+        <li class="card">
+            <span><strong>Legal Assistant at a nonprofit organization - Esperanza Immigrant Rights Project</strong></span>  <span class="emphasis">Jan 2022 - Present</span>
+            
+        </li>
+        <li class="card">
+            <span><strong>Data Entry/ Logistician - Los Angeles School District</strong></span> <span class="emphasis">Feb 2021 - Jan 2022</span>
+            
+        </li>
+        <li class="card">
+            <span><strong>COVID-19 Support Staff - Los Angeles School District</strong></span> <span class="emphasis"> Apr 2020 - Jan 2021</span>
+            
+        </li>
+        <li class="card">
+            <span><strong>Administrative Assistant - Mercury Air Cargo</strong></span> <span class="emphasis">Aug 2018 - Apr 2019</span>
+        
+        </li>
+    </ul>
+
+</div>
+
+<div id="skills" id="skillNav" class="titleName">
     <h1>Skills</h1>
-    <ul></ul>
-</section>
+    <ul>
 
-<section>
+    </ul>
+</div>
+
+<div class="titleName" id="connect">
     <h1>Connect</h1>
  <ul>
     <li>Github: https://github.com/Cin-Gomez</li>
     <li>Email: gomezcinthya96@gmail.com</li>
 </ul>
-</section>
+</div>
 
-<section>
+
+<div class="titleName" id="contact">
     <h2>Leave a message</h2>
     <form name="leave_message">
         <label>Name</label><br>
@@ -41,14 +97,18 @@ Esperanza Immigrant Rights Project as a administrative assistant </p>
         <input type="email" name="email" required="true"><br>
         <label>Message</label><br>
         <textarea name="message" cols="30" rows="10" required="true"></textarea><br>
-        <button type="submit">Submit</button>
+        <button class="fontButton" type="submit">Submit</button>
     </form>
-</section>
+    
+</div>
 
-<section id="messages">
+<div id="messages" class="titleName">
     <h2>Messages</h2>
     <ul></ul>
-</section>
+</div>
+
+
+</body>
 
 <footer></footer>
 <script src="js/index.js"></script>

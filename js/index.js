@@ -5,14 +5,23 @@ const copyright =document.createElement('p');
 copyright.innerHTML = `Cinthya Gomez ${thisYear}`;
 footer.appendChild(copyright);
 
-const skills =['Microsoft Office', 'JavaScript', 'Data Analysis', 'Spreadsheets: Excel & Google Sheet',];
-const skillsSection =document.querySelector('#skills');
-const ul =skillsSection.querySelector('ul');
-for (let i =0; i < skills.length; i++){
+
+//List of Skills
+//const listSkills = () => {
+    const skills =['Microsoft Office', 'JavaScript', 'Data Analysis', 'Spreadsheets: Excel & Google Sheet',]
+
+    const skillsSection =document.querySelector('#skills');
+    const skillsList =skillsSection.querySelector('ul');
+
+    for (let i =0; i < skills.length; i++){
     const skill =document.createElement('li');
     skill.innerText = skills[i];
-    skillsSection.appendChild(skill);
-}
+    skillsList.appendChild(skill);
+    }
+
+
+
+
 const messageForm = document.querySelector('[name = leave_message]');
 messageForm.addEventListener('submit', function(event){
     event.preventDefault();
