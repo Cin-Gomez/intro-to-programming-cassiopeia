@@ -6,19 +6,31 @@ copyright.innerHTML = `Cinthya Gomez ${thisYear}`;
 footer.appendChild(copyright);
 
 
+function createNewList(sectionId, items) {
+    const section = document.querySelector(sectionId);
+    const ul = section.querySelector('ul');
+    for (let i =0; i < items.length; i++){
+        const item = document.createElement('li');
+        item.innerText = items[i];
+        ul.appendChild(item);
+    }
+}
+
+
+
 //List of Skills
 //const listSkills = () => {
     const skills =['Microsoft Office', 'JavaScript', 'Data Analysis', 'Spreadsheets: Excel & Google Sheet',]
 
-    const skillsSection =document.querySelector('#skills');
-    const skillsList =skillsSection.querySelector('ul');
+    // const skillsSection =document.querySelector('#skills');
+    // const skillsList =skillsSection.querySelector('ul');
 
-    for (let i =0; i < skills.length; i++){
-    const skill =document.createElement('li');
-    skill.innerText = skills[i];
-    skillsList.appendChild(skill);
-    }
-
+    // for (let i =0; i < skills.length; i++){
+    // const skill =document.createElement('li');
+    // skill.innerText = skills[i];
+    // skillsList.appendChild(skill);
+    // }
+    createNewList('#skills', skills);
 
 
 
@@ -70,4 +82,22 @@ messageForm.addEventListener('submit', function(event){
 function onRemoveButtonClick(event) {
     const entry = event.target.parentNode;
     entry.remove();
+
 }
+
+
+function printResponses() {
+    const repositories = JSON.parse(this.response);
+    createNewList('#projects', repositories.map(repo => repo.name));
+    console.log(repositories[0].name);
+    console.log(repositories);
+
+}
+
+
+const githubRequest = new XMLHttpRequest();
+githubRequest.addEventListener('load', printResponses);
+githubRequest.open('GET', 'https://api.github.com/users/Cin-Gomez/repos');
+githubRequest.send();
+
+
