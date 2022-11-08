@@ -10,30 +10,28 @@ function createNewList(sectionId, items) {
     const section = document.querySelector(sectionId);
     const ul = section.querySelector('ul');
     for (let i =0; i < items.length; i++){
-        const item = document.createElement('li');
-        item.innerText = items[i];
-        ul.appendChild(item);
+        const listItem = document.createElement('li');
+        const item = items[i];
+        if (item.name){
+            const repoLink = document.createElement('a');
+            repoLink.href = item.url;
+            repoLink.innerText = item.name;
+            listItem.appendChild(repoLink);
+        } else {
+            listItem.innerText = item;
+        }
+        ul.appendChild(listItem);
     }
 }
 
 
-
-//List of Skills
-//const listSkills = () => {
+// Skills List
     const skills =['Microsoft Office', 'JavaScript', 'Data Analysis', 'Spreadsheets: Excel & Google Sheet',]
 
-    // const skillsSection =document.querySelector('#skills');
-    // const skillsList =skillsSection.querySelector('ul');
-
-    // for (let i =0; i < skills.length; i++){
-    // const skill =document.createElement('li');
-    // skill.innerText = skills[i];
-    // skillsList.appendChild(skill);
-    // }
     createNewList('#skills', skills);
 
 
-
+// Leave a Message Section
 const messageForm = document.querySelector('[name = leave_message]');
 messageForm.addEventListener('submit', function(event){
     event.preventDefault();
@@ -55,6 +53,7 @@ messageForm.addEventListener('submit', function(event){
         newMessage.remove();
    });
 
+// Edit Button
 
    const editButton =document.createElement('button')
    editButton.innerText = 'Edit'
@@ -70,11 +69,12 @@ messageForm.addEventListener('submit', function(event){
    });
 
 
-
     
    newMessage.appendChild(removeButton);
    newMessage.appendChild(editButton);
    messageList.appendChild(newMessage);
+
+   messageSection.setAttribute('style', 'display:block');
 
    messageForm.reset();
 });
@@ -85,19 +85,20 @@ function onRemoveButtonClick(event) {
 
 }
 
+// Link to repositories
 
-function printResponses() {
-    const repositories = JSON.parse(this.response);
-    createNewList('#projects', repositories.map(repo => repo.name));
-    console.log(repositories[0].name);
-    console.log(repositories);
-
+function onSuccess(repositories) {
+    const repos = repositories. map( repo =>(
+        {name : repo.name,
+        url: repo.html_url
+    }
+    ));
+    createNewList('#projects', repos);
+    console.log(repos);
 }
 
+// API Fetch Request
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.addEventListener('load', printResponses);
-githubRequest.open('GET', 'https://api.github.com/users/Cin-Gomez/repos');
-githubRequest.send();
-
-
+fetch('https://api.github.com/users/Cin-Gomez/repos')
+.then((response) => response.json())
+.then(onSuccess);
