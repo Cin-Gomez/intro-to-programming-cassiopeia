@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Gothic+A1">
 </head>  
     
-<body class= "pageLayout">
+<body>
     <navbar>
-        <ul class="nav-list">
+        <ul class="nav-list" >
+            <li class="nav-item">
+                <a>Cinthya Gomez</a>
+            </li>
             <li class="nav-item">
                 <a href = "#about">About</a>
             </li>
@@ -22,10 +25,10 @@
                 <a href = "#experience">Experience</a>
             </li>
             <li class="nav-item">
-                <a href = "#skillNav">Skills</a>
+                <a href = "#skills">Skills</a>
             </li>
             <li class="nav-item">
-                <a href = "#connect">Connect</a>
+                <a href = "#projects">Project</a>
             </li>
             <li class="nav-item">
                 <a href = "#contact">Contact</a>
@@ -33,10 +36,7 @@
             
         </ul>
     </navbar>
-   
- <section  class="pageTitlePos">
-    <span>Cinthya Gomez</span>
-</section>
+
 
 
 <div class="titleName" id="about"> 
@@ -51,7 +51,7 @@
 
 <div class="titleName" id="experience">
     <h1>Experience</h1>
-    <ul>
+    <ul class="experience-ul">
         <li class="card">
             <span><strong>Legal Assistant at a nonprofit organization - Esperanza Immigrant Rights Project</strong></span>  <span class="emphasis">Jan 2022 - Present</span>
             
@@ -74,7 +74,7 @@
 
 <div id="skills" id="skillNav" class="titleName">
     <h1>Skills</h1>
-    <ul>
+    <ul class="card">
 
     </ul>
 </div>
@@ -85,29 +85,27 @@
 
 </div>
 
+<!-- Leave a Message form -->
 
-<div class="titleName" id="connect">
-    <h1>Connect</h1>
- <ul>
-    <li>Github: https://github.com/Cin-Gomez</li>
-    <li>Email: gomezcinthya96@gmail.com</li>
-</ul>
-</div>
+    <section id ="contact" class="titleName">
+        <h1>Leave a Message</h1>
+        <form name ="leave_message">
+            <div class="field field--inline">
+                <label class = "style-label"> Name </label><br>
+                <input class="style-input" type="text" name="name" required="true">
+            </div>
+            <div class="field field--inline">
+                <label class="style-label">Email</label><br>
+                <input class="style-input" type="email" name="email" required="true">
+            </div>
+            <div class="field field--inline">
+                <label class="style-label"> Message</label><br>
+                <textarea class="style-input" name="message" required="true"></textarea>
+            </div>
 
+            <button class="buttonStyle" type="submit">Submit</button>
 
-<div class="titleName" id="contact">
-    <h2>Leave a message</h2>
-    <form name="leave_message">
-        <label>Name</label><br>
-        <input type="text" name="name" required="true"><br>
-        <label>Email</label><br>
-        <input type="email" name="email" required="true"><br>
-        <label>Message</label><br>
-        <textarea name="message" cols="30" rows="10" required="true"></textarea><br>
-        <button class="fontButton" type="submit">Submit</button>
-    </form>
-    
-</div>
+    </section>
 
 <div id="messages" class="titleName" style="display: none;">
     <h2>Messages</h2>
@@ -115,9 +113,29 @@
 </div>
 
 
-</body>
+<!-- Social Media Logos -->
 
-<footer></footer>
+<footer>
+    <div>
+        <ul class="display-footer">
+            <li><a  class="socialIcon" href = "https://github.com/Cin-Gomez" target = "_blank"> 
+                <ion-icon name="logo-github"></ion-icon>
+             </a></li>
+
+            <li> <a class="socialIcon"  href = "https://www.instagram.com/_cinthyaaa" target = "_blank"> 
+                <ion-icon name="logo-instagram"></ion-icon>
+             </a> </li>
+
+             <li><a class="socialIcon" href = "https://www.linkedin.com/in/cinthya-gomez-818913166/" target = "_blank"> 
+                <ion-icon name="logo-linkedin"></ion-icon>
+             </a> </li>
+        </ul>
+    
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</footer>
+
 <script src="js/index.js"></script>
 </body>
 

@@ -1,10 +1,14 @@
+// Copyright Date
+
 const today = new Date();
 const thisYear = today.getFullYear();
 const footer =document.querySelector('footer');
 const copyright =document.createElement('p');
-copyright.innerHTML = `Cinthya Gomez ${thisYear}`;
+copyright.innerHTML =  ` &copy; Cinthya Gomez <ion-icon name="heart-circle-outline"></ion-icon> ${thisYear}`;
 footer.appendChild(copyright);
 
+
+// Creating a function that creates list instead of rewriting function
 
 function createNewList(sectionId, items) {
     const section = document.querySelector(sectionId);
@@ -26,7 +30,7 @@ function createNewList(sectionId, items) {
 
 
 // Skills List
-    const skills =['Microsoft Office', 'JavaScript', 'Data Analysis', 'Spreadsheets: Excel & Google Sheet',]
+    const skills =['Microsoft Office', 'JavaScript', 'Data Analysis', 'Spreadsheets: Excel & Google Sheet', 'JavaScript', 'CSS', 'HTML']
 
     createNewList('#skills', skills);
 
