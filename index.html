@@ -85,27 +85,26 @@
 
 </div>
 
-<!-- Leave a Message form -->
 
-    <section id ="contact" class="titleName">
-        <h1>Leave a Message</h1>
-        <form name ="leave_message">
-            <div class="field field--inline">
-                <label class = "style-label"> Name </label><br>
-                <input class="style-input" type="text" name="name" required="true">
-            </div>
-            <div class="field field--inline">
-                <label class="style-label">Email</label><br>
-                <input class="style-input" type="email" name="email" required="true">
-            </div>
-            <div class="field field--inline">
-                <label class="style-label"> Message</label><br>
-                <textarea class="style-input" name="message" required="true"></textarea>
-            </div>
+
+     <h1 class="titleName"> Leave a Message</h1>
+    
+     <div class ="container" section id="contact"> 
+        <form name="leave_message">
+            <label>Name</label>
+            <input type="text" name="name" required="true" placeholder="Your name...">
+
+            <label>Email</label>
+            <input type="text"  name="email" required="true" placeholder="Email...">
+
+            <label>Message</label>
+            <textarea  name="message" placeholder="Leave a Message..." required="true"
+            style="height:100px"></textarea>
 
             <button class="buttonStyle" type="submit">Submit</button>
+        </form>
+    </div> 
 
-    </section>
 
 <div id="messages" class="titleName" style="display: none;">
     <h2>Messages</h2>

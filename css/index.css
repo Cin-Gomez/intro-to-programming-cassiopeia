@@ -86,35 +86,6 @@ body{
 
 /* Message Form Styling */
 
-.field {
-    display:block;
-    margin-bottom:1rem;
-    max-width: 100%;
-    width:100%;
-    
-
-}
-
-.field--inline {
-    display:inline-block;
-    justify-content:flex-start;
-    margin-right:1rem;
-
-}
-
-
-
-.style-label{
-    color:#03172c;
-    font-weight:500;
-    margin-bottom:0.25rem;
-}
-.style-input{
-    padding:0rem;
-    width:50%; 
-    height: 100%;
-
-}
 
 .buttonStyle{
     font-family: 'Gothic A1';
@@ -124,6 +95,39 @@ body{
 
 }
 
+*{box-sizing: content-box;
+
+}
+
+input[type=text], 
+textarea {
+    width:100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing:border-box;
+    margin-top:6px;
+    margin-bottom:8px;
+    resize:vertical;
+}
+
+input[type=submit] {
+    background-color:#04aa6d;
+    color:white;
+    padding: 12px 20px;
+    border:none;
+    border-radius: 4px;
+}
+
+
+
+.container {
+    border-radius :5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-right: 20rem;
+
+}
 
 
 .pageTitlePos {
@@ -194,6 +198,10 @@ footer {
     ul{
         list-style: none;
         
+    }
+
+    *{
+        justify-content: center;
     }
 
 }
